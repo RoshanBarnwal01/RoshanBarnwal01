@@ -1,0 +1,35 @@
+name: Generate GitHub snake
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate snake SVGs
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
+            dist/github-snake.gif?color_snake=orange&color_dots=#bfd6f6,#8bd0ff,#64b5ff,#4aa5ff,#1f6feb
+
+      - name: Push generated files to output branch
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan output
+          git rm -rf . || true
+          cp -r dist/* .
+          git add .
+          git commit -m "Update snake" || exit 0
+          git push origin HEAD:output --force
