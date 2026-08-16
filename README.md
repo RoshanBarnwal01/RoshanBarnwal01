@@ -46,11 +46,11 @@
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=RoshanBarnwal01&bg_color=0d1117&color=7dd3fc&line=7dd3fc&point=bae6fd&area=true&hide_border=false&border_color=7dd3fc&area_color=0a2a3a" />
 </div>
 
-<br/>
-<!--
+---
+
 ## 🐍 Contributions Snake
 
- <div align="center">
+<div align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)"
             srcset="https://raw.githubusercontent.com/RoshanBarnwal01/RoshanBarnwal01/output/github-snake-dark.svg" />
@@ -60,11 +60,11 @@
          src="https://raw.githubusercontent.com/RoshanBarnwal01/RoshanBarnwal01/output/github-snake-dark.svg" />
   </picture>
 </div>
-![](https://raw.githubusercontent.com/RoshanBarnwal01/RoshanBarnwal01/output/github-contribution-grid-snake-dark.svg)
- -->
 
 ---
+
 ## 🤝 Connect
+
 <div align="center">
   <a href="https://github.com/RoshanBarnwal01">
     <img src="https://img.shields.io/badge/GitHub-0a2a3a?style=for-the-badge&logo=github&logoColor=7dd3fc" />
